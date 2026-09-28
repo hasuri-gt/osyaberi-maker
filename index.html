@@ -2,69 +2,67 @@
 <html lang="ja">
 
 <head>
-<meta charset="UTF-8">
-<title>口パクアプリ</title>
 <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+
+<title>おしゃべりメーカー</title>
+
 </head>
 
-
 <body>
+<h1>おしゃべりメーカー</h1>
 
-
-<h1>キャラクター口パク</h1>
-
-
-<div>
-<img id="characterImage">
-</div>
-
-
-<h2>画像登録</h2>
-
-
-<p>あ</p>
+<p>---あ の画像---</p>
 <input type="file" id="a" accept="image/*">
 
-
-<p>い</p>
+<p>---い の画像---</p>
 <input type="file" id="i" accept="image/*">
 
-
-<p>う</p>
+<p>---う の画像---</p>
 <input type="file" id="u" accept="image/*">
 
-
-<p>え</p>
+<p>---え の画像---</p>
 <input type="file" id="e" accept="image/*">
 
-
-<p>お</p>
+<p>---お の画像---</p>
 <input type="file" id="o" accept="image/*">
 
-
-<p>ん</p>
+<p>---ん の画像---</p>
 <input type="file" id="n" accept="image/*">
 
+<br>
 
+<div class="characterArea">
+    <img id="characterImage" width="400">
+    <div id="currentText"></div>
+</div>
 
-<h2>セリフ</h2>
+<br><br>
+
+<h2>読み上げ内容</h2>
 
 <textarea id="textInput">
 こんにちは
 </textarea>
 
+<br>
+
+<label>
+<input type="checkbox" id="loopCheck">
+ループ再生
+</label>
 
 <br>
 
-<button onclick="speak()">
+<button id="speakButton" onclick="speak()">
 しゃべる
 </button>
 
-
+<button id="stopButton" onclick="stopLipSync()" disabled>
+停止
+</button>
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
