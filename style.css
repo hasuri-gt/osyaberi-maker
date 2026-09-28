@@ -1,5 +1,11 @@
 body {
 
+    font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,20 +16,28 @@ body {
 }
 
 .characterArea {
-    position:relative;
-
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 #characterImage {
     display:block;
+    width:100%;
+    max-width:400px;
+
 }
 
 #currentText {
-    position:absolute;
-    top:-5px;
-    width:100%;
+
+    width:400px;
+    height:50px;
     font-size:20px;
     font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
 }
 
 #currentText span {

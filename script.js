@@ -206,10 +206,10 @@ function playLipSync(timeline){
 
             // 最初の口だけ短くする
             if(mouthIndex === 0){
-                speed = 50;
+                speed = 70;
             }else{
                 // 残り時間
-                speed = 200 - 50;
+                speed = 200 - 70;
             }
 
         }
@@ -322,9 +322,9 @@ function getVowel(c){
 
     "え":["e"],
     "け":["e"],
-    "せ":["i","e"],
-    "て":["i","e"],
-    "ね":["i","e"],
+    "せ":["n","e"],
+    "て":["n","e"],
+    "ね":["n","e"],
     "へ":["e"],
     "め":["n","e"],
     "れ":["e"],
