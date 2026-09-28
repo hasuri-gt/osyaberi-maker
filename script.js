@@ -198,7 +198,10 @@ function playLipSync(timeline){
         // =====================
         // 表示時間計算
         // =====================
-        let defspeed = 200;
+        let defspeed = Number(
+                        document.getElementById("speedSlider").value
+                        );
+        let fastspeed = defspeed * 0.2;
         let speed = defspeed;
 
         // 1文字内で複数口の場合
@@ -206,10 +209,10 @@ function playLipSync(timeline){
 
             // 最初の口だけ短くする
             if(mouthIndex === 0){
-                speed = 70;
+                speed = fastspeed;
             }else{
                 // 残り時間
-                speed = 200 - 70;
+                speed = defspeed - fastspeed;
             }
 
         }
@@ -438,3 +441,14 @@ function updateSubtitle(index){
     });
 
 }
+
+document
+.getElementById("speedSlider")
+.addEventListener("input", function(){
+
+    document
+    .getElementById("speedValue")
+    .innerText =
+    this.value + "ms";
+
+});

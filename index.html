@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja">                                <!-- 日本語 -->
 
 <head>
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-
-<title>おしゃべりメーカー</title>
-
+    <link rel="stylesheet" href="style.css">    <!-- css読み込み -->
+    <meta charset="UTF-8">
+    <title>おしゃべりメーカー</title>
 </head>
 
-<body>
-<h1>おしゃべりメーカー</h1>
 
-<p>---あ の画像---</p>
-<input type="file" id="a" accept="image/*">
+<body>
+
+<h1>おしゃべりメーカー</h1>                      <!--ヘッダー1 1は文字サイズ -->
+
+<p>---あ の画像---</p>                          <!-- pは文章 -->
+<input type="file" id="a" accept="image/*">    <!-- ファイル選択ボタン -->
 
 <p>---い の画像---</p>
 <input type="file" id="i" accept="image/*">
@@ -32,15 +32,7 @@
 
 <br>
 
-<div class="characterArea">
-    <img id="characterImage" width="400">
-    <div id="currentText"></div>
-</div>
-
-<br><br>
-
-<h2>読み上げ内容</h2>
-
+<h2>読み上げ内容</h2>                           <!-- セリフ入力欄 -->
 <textarea id="textInput">
 こんにちは
 </textarea>
@@ -48,9 +40,22 @@
 <br>
 
 <label>
-<input type="checkbox" id="loopCheck">
+<input type="checkbox" id="loopCheck">          <!-- チェックボックス ラベル選択しても切り替わる -->
 ループ再生
 </label>
+
+<br>
+
+<label>
+1文字当たりの速さ
+<input 
+    type="range"
+    id="speedSlider"
+    min="50"
+    max="500"
+    value="200">
+</label>
+<span id="speedValue">200ms</span>
 
 <br>
 
@@ -62,7 +67,15 @@
 停止
 </button>
 
-<script src="script.js"></script>
+<br><br>
+
+<div class="characterArea">                     <!-- 画像表示位置グループ -->
+    <img id="characterImage" width="400">
+    <div id="currentText"></div>
+</div>
+
+<script src="script.js"></script>               <!-- js読み込み -->
 
 </body>
+
 </html>
