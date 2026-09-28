@@ -1,0 +1,19 @@
+body{
+    text-align:center;
+    font-family:sans-serif;
+}
+
+
+.character img{
+
+    width:400px;
+
+}
+
+
+textarea{
+
+    width:300px;
+    height:100px;
+
+}
